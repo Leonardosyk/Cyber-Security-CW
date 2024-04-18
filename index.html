@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta X-Content-Security-Policy: script-src 'self' https://www.google.com>
+    <title>Lovejoy's Antique Store</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+    
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('./resources/background.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .login{
+            width: 800px;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*background: linear-gradient(*/
+            /*    to right bottom,*/
+            /*    rgba(255,255,255,.7),*/
+            /*    rgba(255,255,255,.5),*/
+            /*    rgba(255,255,255,.4)*/
+            /*);*/
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px #000000;
+            border-radius: 15px;
+        }
+
+        .table{
+            width: 500px;
+            height: 100px;
+            font: 900 30px '';
+            text-align: center;
+            letter-spacing: 5px;
+            color: #000000;
+        }
+
+        .table2{
+            font: 900 40px '';
+            text-align: center;
+            letter-spacing: 5px;
+            color: #000000;
+        }
+
+        .box{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            line-height: 100%;
+        }
+
+        .box input{
+            
+            width: 300px;
+            height: 40px;
+            
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            outline: none;
+            border: 0;
+            padding: 10px;
+            background-color: transparent;
+            border-bottom: 4px solid rgb(174 238 238);
+            font: 900 16px '';
+            
+        }
+
+        .confirm{
+            text-align: center;
+            display: block;
+            height: 24px;
+            padding: 12px;
+            font: 900 20px '';
+            border-radius: 10px;
+            margin-top: 20px;
+            color: #000000;
+            letter-spacing: 3px;
+            background-image: linear-gradient(to left,
+            #BEBEBE,#D3D3D3);
+        }
+
+        .register{
+            width: 320px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+			color:#FFFFFF;
+        }
+        .g-recaptcha{
+            position: absolute;
+            /* 水平居中 */
+            left: 47%;
+            width:30%;
+            margin-left: -15%;
+            /* 垂直居中 */
+            /*top: 50%;*/
+            /*height: 30%;*/
+            /*margin-top: -15%;*/
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="login">
+        <form action = 'complexLoginCheck.php' method = 'POST'>
+        <div class="box">
+            <p class="table">Hi There is Lovejoy's Antique Store!</p>
+            <p class="table2">Login</p>
+            <input name = "txtUsername" type="text" placeholder="Username">
+            <input name = "txtPassword" type="password" placeholder="Password">
+            <br>
+            <input type = 'submit' value = 'Login' class="confirm">
+            <br>
+            <div class="register">
+                <a href="email_verify.php" >Register</a>
+                <br/><a href="verification_code.php">Recover Your Password</a>
+            </div>
+        </div>
+        <br>
+        <div class="g-recaptcha" data-sitekey="6LeIJjojAAAAAMzlQzmCEs7GcoVkeQGHFjQrV47N"></div>
+        </form>
+    </div>
+    
+    
+
+
+</body>
+</html> 
